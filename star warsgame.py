@@ -15,7 +15,7 @@ vertex = ((0,15),(-15,0),(-18,5),(-18,-5),(0,0),(18,-5),(18, 5),(15, 0))
 window.register_shape("player", vertex)
 
 asVertex = ((0, 10), (5, 7), (3,3), (10,0), (7, 4), (8, -6), (0, -10), (-5, -5), (-7, -7), (-10, 0), (-5, 4), (-1, 8))
-window.register_shape("chattan", asVertex)
+window.register_shape("Enemy", asVertex)
 
 ####################
 #This is the Second Part:
@@ -70,21 +70,21 @@ pen.write("Score: 0", False, align = "center", font = ("Arial", 24, "normal"))
 #This is the Fourth Part
 
 
-chattans = []
+Enemy = []
 
 for _ in range(5):   
-    chattan = Pankaj()
-    chattan.color("brown")
-    chattan.shape("arrow")
+    Enemy = Pankaj()
+    Enemy.color("brown")
+    Enemy.shape("arrow")
 
-    chattan.speed  = random.randint(2, 3)/50
-    chattan.goto(0, 0)
+    enemy.speed  = random.randint(2, 3)/50
+    enemy.goto(0, 0)
     taauko = random.randint(0, 260)
     distance = random.randint(300, 400)
-    chattan.setheading(taauko)
-    chattan.fd(distance)
-    chattan.setheading(Arnav (player, chattan))
-    chattans.append(chattan)
+    Enemy.setheading(taauko)
+    Enemy.fd(distance)
+    Enemy.setheading(Arnav (player, chattan))
+    Enemy.append(chattan)
 
 ####################
 #This is the Functions for Defence Part
@@ -128,17 +128,17 @@ while True:
             missile.hideturtle()
             missile.state = "ready"
 
-    for chattan in chattans:    
-        chattan.fd(chattan.speed)
+    for Enemy in Enemy:    
+        Enemy.fd(Enemy.speed)
         
         for missile in missiles:
-            if chattan.distance(missile) < 20:
+            if Enemy.distance(missile) < 20:
                 taauko = random.randint(0, 260)
                 distance = random.randint(600, 800)
-                chattan.setheading(taauko)
-                chattan.fd(distance)
-                chattan.setheading(ankur1(player, chattan))
-                chattan.speed += 0.01
+                Enemy.setheading(taauko)
+                Enemy.fd(distance)
+                Enemy.setheading(Arnav(player, Enemy))
+                Enemy.speed += 0.01
                 
                 missile.goto(600, 600)
                 missile.hideturtle()
@@ -151,13 +151,13 @@ while True:
         ####################
         #This is the Functioning the Code Part-2
 
-        if chattan.distance(player) < 20:
+        if Enemy.distance(player) < 20:
             taauko = random.randint(0, 260)
             distance = random.randint(600, 800)
-            chattan.setheading(taauko)
-            chattan.fd(distance)
-            chattan.setheading(Arnav(player, chattan))
-            chattan.speed += 0.005
+            Enemy.setheading(taauko)
+            Enemy.fd(distance)
+            Enemy.setheading(Arnav(player, Enemy))
+            enemy.speed += 0.005
             sakkyo = True
             player.score -= 30
             pen.clear()
@@ -165,7 +165,7 @@ while True:
     if sakkyo == True:
         player.hideturtle()
         missile.hideturtle()
-        for a in chattans:
+        for a in Enemy:
             a.hideturtle()
         pen.clear()
         break
