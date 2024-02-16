@@ -21,7 +21,7 @@ window.register_shape("chattan", asVertex)
 #This is the Second Part:
 
 
-class Ankur(turtle.Turtle):
+class Pankaj(turtle.Turtle):
     def __init__(self):
         turtle.Turtle.__init__(self)
 
@@ -42,7 +42,7 @@ def ankur1(t1, t2):
     return taauko
 
 
-player = Ankur()
+player = Arnav()
 player.color("white")
 player.shape("player")
 player.score = 0
@@ -52,7 +52,7 @@ player.score = 0
 
 missiles = []
 for _ in range(3):
-    missile = Ankur()
+    missile = Pankaj()
     missile.color("red")
     missile.shape("arrow")
     missile.speed = 1
@@ -60,7 +60,7 @@ for _ in range(3):
     missile.hideturtle()
     missiles.append(missile)
 
-pen = Ankur()
+pen = Pankaj()
 pen.color("white")
 pen.hideturtle()
 pen.goto(0, 250)
@@ -73,7 +73,7 @@ pen.write("Score: 0", False, align = "center", font = ("Arial", 24, "normal"))
 chattans = []
 
 for _ in range(5):   
-    chattan = Ankur()
+    chattan = Pankaj()
     chattan.color("brown")
     chattan.shape("arrow")
 
@@ -83,7 +83,7 @@ for _ in range(5):
     distance = random.randint(300, 400)
     chattan.setheading(taauko)
     chattan.fd(distance)
-    chattan.setheading(ankur1(player, chattan))
+    chattan.setheading(Arnav (player, chattan))
     chattans.append(chattan)
 
 ####################
@@ -156,7 +156,7 @@ while True:
             distance = random.randint(600, 800)
             chattan.setheading(taauko)
             chattan.fd(distance)
-            chattan.setheading(ankur1(player, chattan))
+            chattan.setheading(Arnav(player, chattan))
             chattan.speed += 0.005
             sakkyo = True
             player.score -= 30
