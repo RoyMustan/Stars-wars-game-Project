@@ -29,7 +29,7 @@ class Pankaj(turtle.Turtle):
         self.penup()
 
 
-def ankur1(t1, t2):
+def Pankaj(t1, t2):
     x1 = t1.xcor()
     y1 = t1.ycor()
     
